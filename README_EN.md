@@ -87,11 +87,11 @@ This tool is intended for legitimate purposes only, such as system administratio
 ## 🙏 Credits
 
 - [Shizuku](https://github.com/RikkaApps/Shizuku) - ADB privilege escalation
-- MIUI - IMQSNative service
+- The users worked on it in KuAn
 
 ## 📄 License
 
-This project is based on Shizuku and follows similar licensing terms.
+This project uses MIT licensing.
 
 ## 👤 Author
 
