@@ -1,0 +1,164 @@
+#!/system/bin/sh
+#
+# FakeRoot su - MIUI IMQSNative wrapper
+# This script provides a su-like interface using MIUI's IMQSNative service
+#
+# Usage: su [options] [command]
+#   su              - Start interactive root shell
+#   su -c "cmd"     - Execute command as root
+#   su -s shell     - Use specified shell
+#
+
+# Version
+FAKEROOT_VERSION="1.0.0"
+
+# Default settings
+DEFAULT_TIMEOUT=60
+DEFAULT_SHELL="/system/bin/sh"
+OUTPUT_DIR="/sdcard"
+
+# Check if IMQSNative service is available
+check_service() {
+    # Try a simple test command
+    local test_output="${OUTPUT_DIR}/.fakeroot_check_$$"
+    service call miui.mqsas.IMQSNative 21 i32 1 s16 "id" i32 1 s16 "" s16 "$test_output" i32 5 >/dev/null 2>&1
+    sleep 0.3
+    if [ -f "$test_output" ] && grep -q "uid" "$test_output" 2>/dev/null; then
+        rm -f "$test_output"
+        return 0
+    fi
+    rm -f "$test_output"
+    return 1
+}
+
+# Execute command via IMQSNative
+exec_imqs() {
+    local cmd="$1"
+    local output_file="$2"
+    local timeout="${3:-$DEFAULT_TIMEOUT}"
+
+    # Execute command
+    service call miui.mqsas.IMQSNative 21 i32 1 s16 "sh" i32 1 s16 "-c \"$cmd\"" s16 "$output_file" i32 $timeout >/dev/null 2>&1
+
+    # Wait for output file
+    local wait=0
+    while [ ! -f "$output_file" ] && [ $wait -lt 30 ]; do
+        sleep 0.1
+        wait=$((wait + 1))
+    done
+
+    return $?
+}
+
+# Execute a command and display output
+run_command() {
+    local cmd="$1"
+    local output_file="${OUTPUT_DIR}/.fakeroot_out_$$"
+
+    exec_imqs "$cmd" "$output_file" "$DEFAULT_TIMEOUT"
+
+    # Display output
+    if [ -f "$output_file" ]; then
+        cat "$output_file"
+        rm -f "$output_file"
+    fi
+}
+
+# Show help
+show_help() {
+    cat << EOF
+FakeRoot su v${FAKEROOT_VERSION} - MIUI IMQSNative wrapper
+
+Usage: su [options] [command [args...]]
+
+Options:
+    -c, --command COMMAND    Execute COMMAND as root
+    -s, --shell SHELL        Use SHELL (default: /system/bin/sh)
+    -t, --timeout SECONDS    Set timeout (default: 60)
+    -v, --version            Show version
+    -h, --help               Show this help
+
+Examples:
+    su                       Start interactive root shell
+    su -c "id"               Execute 'id' as root
+    su -c "ls /data/data"    List /data/data as root
+
+Note: This tool only works on MIUI devices with IMQSNative service.
+EOF
+}
+
+# Main entry point
+main() {
+    local command=""
+    local timeout="$DEFAULT_TIMEOUT"
+    local interactive=true
+
+    # Parse arguments
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            -c|--command)
+                shift
+                if [ -z "$1" ]; then
+                    echo "Error: No command specified" >&2
+                    exit 1
+                fi
+                command="$1"
+                interactive=false
+                shift
+                ;;
+            -s|--shell)
+                shift
+                shift
+                ;;
+            -t|--timeout)
+                shift
+                timeout="$1"
+                shift
+                ;;
+            -v|--version)
+                echo "FakeRoot su v${FAKEROOT_VERSION}"
+                exit 0
+                ;;
+            -h|--help)
+                show_help
+                exit 0
+                ;;
+            -*)
+                # Ignore unknown options for compatibility
+                shift
+                ;;
+            *)
+                # Remaining arguments are the command
+                command="$*"
+                interactive=false
+                break
+                ;;
+        esac
+    done
+
+    # Check service availability
+    if ! check_service; then
+        echo "Error: IMQSNative service not available. This tool only works on MIUI devices." >&2
+        exit 1
+    fi
+
+    # Execute
+    if [ "$interactive" = true ]; then
+        # For interactive mode, start a shell loop
+        echo "FakeRoot v${FAKEROOT_VERSION} - Root shell via IMQSNative"
+        echo "Type 'exit' to quit."
+        while true; do
+            printf "# "
+            read -r cmd
+            if [ -z "$cmd" ] || [ "$cmd" = "exit" ] || [ "$cmd" = "quit" ]; then
+                break
+            fi
+            run_command "$cmd"
+        done
+    else
+        run_command "$command"
+    fi
+}
+
+# Run main
+main "$@"

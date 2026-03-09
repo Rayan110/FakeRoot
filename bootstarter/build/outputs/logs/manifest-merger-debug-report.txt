@@ -1,0 +1,59 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:5:22-78
+application
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:7:5-26:19
+receiver#com.fakeroot.bootstarter.BootReceiver
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:9:9-19:20
+	android:enabled
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:11:13-35
+	android:exported
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:12:13-36
+	android:name
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:10:13-41
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:13:13-18:29
+	android:priority
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:13:28-51
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:14:17-79
+	android:name
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:14:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:15:17-82
+	android:name
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:15:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:16:17-82
+	android:name
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:16:25-79
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:17:17-84
+	android:name
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:17:25-81
+service#com.fakeroot.bootstarter.AutoStartService
+ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:22:9-25:40
+	android:enabled
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:24:13-35
+	android:exported
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:23:13-45
+uses-sdk
+INJECTED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml
+INJECTED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml

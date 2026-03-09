@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/fragment_terminal.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/fragment_terminal.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/item_status.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/item_status.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/item_app.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/item_app.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/item_action.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/item_action.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/activity_main.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/activity_request_permission.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/activity_request_permission.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/fragment_about.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/fragment_about.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/fragment_apps.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/fragment_apps.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/activity_settings.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.fakeroot.manager-mergeReleaseResources-52:/layout/fragment_home.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/fragment_home.xml"
+    }
+]

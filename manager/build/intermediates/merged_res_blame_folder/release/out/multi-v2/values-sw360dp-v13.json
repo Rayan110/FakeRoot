@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.fakeroot.manager-mergeReleaseResources-51:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\wn732\\.gradle\\caches\\8.14\\transforms\\dab7c1df4784f64a7d91a5ce1e7e05da\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.fakeroot.manager-mergeReleaseResources-51:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\wn732\\.gradle\\caches\\8.14\\transforms\\7632e902ac53f519140266c7e6afa8b7\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

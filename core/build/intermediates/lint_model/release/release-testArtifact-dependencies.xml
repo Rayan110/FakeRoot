@@ -1,0 +1,14 @@
+<dependencies>
+  <compile
+      roots=":@@:core::release">
+    <dependency
+        name=":@@:core::release"
+        simpleName="FakeRoot:core"/>
+  </compile>
+  <package
+      roots=":@@:core::release">
+    <dependency
+        name=":@@:core::release"
+        simpleName="FakeRoot:core"/>
+  </package>
+</dependencies>

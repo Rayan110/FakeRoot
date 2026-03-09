@@ -1,0 +1,52 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.fakeroot.bootstarter" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+6
+7    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+7-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:5:5-81
+7-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:5:22-78
+8
+9    <application>
+9-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:7:5-26:19
+10
+11        <!-- Boot receiver -->
+12        <receiver
+12-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:9:9-19:20
+13            android:name="com.fakeroot.bootstarter.BootReceiver"
+13-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:10:13-41
+14            android:enabled="true"
+14-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:11:13-35
+15            android:exported="true" >
+15-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:12:13-36
+16            <intent-filter android:priority="1000" >
+16-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:13:13-18:29
+16-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:13:28-51
+17                <action android:name="android.intent.action.BOOT_COMPLETED" />
+17-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:14:17-79
+17-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:14:25-76
+18                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+18-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:15:17-82
+18-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:15:25-79
+19                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+19-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:16:17-82
+19-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:16:25-79
+20                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+20-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:17:17-84
+20-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:17:25-81
+21            </intent-filter>
+22        </receiver>
+23
+24        <!-- Auto-start service -->
+25        <service
+25-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:22:9-25:40
+26            android:name="com.fakeroot.bootstarter.AutoStartService"
+26-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:23:13-45
+27            android:enabled="true"
+27-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:24:13-35
+28            android:exported="false" />
+28-->C:\Users\wn732\Desktop\FakeRoot\bootstarter\src\main\AndroidManifest.xml:25:13-37
+29    </application>
+30
+31</manifest>

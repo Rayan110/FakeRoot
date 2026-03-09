@@ -1,0 +1,7 @@
+#!/system/bin/sh
+# FakeRoot su - MIUI IMQSNative wrapper
+# Usage: su -c "command"
+OUT=/sdcard/.fr_$$
+service call miui.mqsas.IMQSNative 21 i32 1 s16 sh i32 1 s16 "-c '$2'" s16 $OUT i32 60 >/dev/null 2>&1
+sleep 0.3
+[ -f $OUT ] && cat $OUT && rm -f $OUT

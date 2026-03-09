@@ -1,0 +1,126 @@
+#!/system/bin/sh
+#
+# FakeRoot su - MIUI IMQSNative wrapper
+# This script provides a su-like interface using MIUI's IMQSNative service
+#
+# Installation:
+#   Copy to /data/local/tmp/su and make executable:
+#   adb push su /data/local/tmp/su
+#   adb shell chmod 755 /data/local/tmp/su
+#
+#   Or via Magisk module to /system/bin/su
+#
+
+FAKEROOT_VERSION="1.0.0"
+DEFAULT_TIMEOUT=60
+OUTPUT_DIR="/sdcard"
+
+# Execute command via IMQSNative and return output
+exec_imqs_command() {
+    local cmd="$1"
+    local output_file="${OUTPUT_DIR}/.fr_out_$$"
+    local timeout="${2:-$DEFAULT_TIMEOUT}"
+
+    # Execute via IMQSNative using single quotes for the command argument
+    # This avoids quote nesting issues with the s16 parameter
+    service call miui.mqsas.IMQSNative 21 \
+        i32 1 s16 "sh" \
+        i32 1 s16 "-c '$cmd'" \
+        s16 "$output_file" \
+        i32 $timeout >/dev/null 2>&1
+
+    # Wait for output
+    local wait=0
+    while [ ! -f "$output_file" ] && [ $wait -lt 50 ]; do
+        sleep 0.1
+        wait=$((wait + 1))
+    done
+
+    # Output result
+    if [ -f "$output_file" ]; then
+        cat "$output_file"
+        rm -f "$output_file"
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Parse standard su arguments
+parse_su_args() {
+    local cmd=""
+    local i=1
+
+    while [ $i -le $# ]; do
+        eval "arg=\$$i"
+        case "$arg" in
+            -c)
+                i=$((i + 1))
+                eval "cmd=\$$i"
+                ;;
+            -s|-t)
+                i=$((i + 1))
+                ;;
+            -v|--version)
+                echo "FakeRoot su v${FAKEROOT_VERSION}"
+                exit 0
+                ;;
+            -h|--help)
+                echo "Usage: su [-c command]"
+                exit 0
+                ;;
+            *)
+                # Collect remaining args as command
+                if [ -z "$cmd" ]; then
+                    cmd="$arg"
+                    i=$((i + 1))
+                    while [ $i -le $# ]; do
+                        eval "arg=\$$i"
+                        cmd="$cmd $arg"
+                        i=$((i + 1))
+                    done
+                fi
+                ;;
+        esac
+        i=$((i + 1))
+    done
+
+    echo "$cmd"
+}
+
+# Main
+main() {
+    # Check IMQSNative availability
+    local test_out="${OUTPUT_DIR}/.fr_check_$$"
+    service call miui.mqsas.IMQSNative 21 i32 1 s16 "id" i32 1 s16 "" s16 "$test_out" i32 5 >/dev/null 2>&1
+    sleep 0.2
+
+    if [ ! -f "$test_out" ] || ! grep -q "uid" "$test_out" 2>/dev/null; then
+        rm -f "$test_out" 2>/dev/null
+        echo "FakeRoot: IMQSNative service not available" >&2
+        exit 1
+    fi
+    rm -f "$test_out" 2>/dev/null
+
+    # Parse arguments
+    local command=$(parse_su_args "$@")
+
+    if [ -n "$command" ]; then
+        # Execute command
+        exec_imqs_command "$command"
+        exit $?
+    else
+        # Interactive mode - simple loop
+        echo "FakeRoot v${FAKEROOT_VERSION} - Root shell"
+        echo "Type 'exit' to quit."
+        while true; do
+            printf "root@device # "
+            read -r line
+            [ -z "$line" ] && continue
+            [ "$line" = "exit" ] || [ "$line" = "quit" ] && break
+            exec_imqs_command "$line"
+        done
+    fi
+}
+
+main "$@"

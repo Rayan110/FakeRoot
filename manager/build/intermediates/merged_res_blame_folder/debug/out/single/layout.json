@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "com.fakeroot.manager-mergeDebugResources-52:/layout/fragment_home.xml",
+        "source": "com.fakeroot.manager-main-55:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\item_action.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\item_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\item_app.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\item_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\activity_request_permission.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\activity_request_permission.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\fragment_terminal.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\fragment_terminal.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\fragment_apps.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\fragment_apps.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\item_status.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\item_status.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\fragment_about.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\fragment_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-mergeDebugResources-52:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\wn732\\.gradle\\daemon\\8.14\\com.fakeroot.manager-main-55:\\layout\\activity_main.xml"
+    }
+]

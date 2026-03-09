@@ -1,0 +1,287 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.fakeroot.manager"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+11-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:4:5-81
+11-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:4:22-78
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:5:5-77
+12-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:5:22-74
+13    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+13-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:6:5-77
+13-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:6:22-74
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:7:5-67
+14-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:7:22-64
+15
+16    <!-- FakeRoot permissions -->
+17    <permission
+17-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:10:5-14:61
+18        android:name="com.fakeroot.permission.API"
+18-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:11:9-51
+19        android:description="@string/permission_api_desc"
+19-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:14:9-58
+20        android:label="@string/permission_api_label"
+20-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:13:9-53
+21        android:protectionLevel="dangerous" />
+21-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:12:9-44
+22    <permission
+22-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:16:5-19:60
+23        android:name="com.fakeroot.permission.MANAGER"
+23-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:17:9-55
+24        android:label="@string/permission_manager_label"
+24-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:19:9-57
+25        android:protectionLevel="signature" />
+25-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:18:9-44
+26    <permission
+26-->[androidx.core:core:1.12.0] C:\Users\wn732\.gradle\caches\8.14\transforms\4c0baf78fd7bf6146cf73eaad9119295\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+27        android:name="com.fakeroot.manager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+27-->[androidx.core:core:1.12.0] C:\Users\wn732\.gradle\caches\8.14\transforms\4c0baf78fd7bf6146cf73eaad9119295\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+28        android:protectionLevel="signature" />
+28-->[androidx.core:core:1.12.0] C:\Users\wn732\.gradle\caches\8.14\transforms\4c0baf78fd7bf6146cf73eaad9119295\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+29
+30    <uses-permission android:name="com.fakeroot.manager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+30-->[androidx.core:core:1.12.0] C:\Users\wn732\.gradle\caches\8.14\transforms\4c0baf78fd7bf6146cf73eaad9119295\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+30-->[androidx.core:core:1.12.0] C:\Users\wn732\.gradle\caches\8.14\transforms\4c0baf78fd7bf6146cf73eaad9119295\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+31    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+31-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\wn732\.gradle\caches\8.14\transforms\3a09cb4b045cb02677ecb317c8579543\transformed\provider-13.1.5\AndroidManifest.xml:8:5-78
+31-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\wn732\.gradle\caches\8.14\transforms\3a09cb4b045cb02677ecb317c8579543\transformed\provider-13.1.5\AndroidManifest.xml:8:22-75
+32
+33    <application
+33-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:21:5-80:19
+34        android:name="com.fakeroot.manager.FakeRootApplication"
+34-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:22:9-44
+35        android:allowBackup="true"
+35-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:23:9-35
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.12.0] C:\Users\wn732\.gradle\caches\8.14\transforms\4c0baf78fd7bf6146cf73eaad9119295\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+37        android:extractNativeLibs="false"
+38        android:icon="@mipmap/ic_launcher"
+38-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:24:9-43
+39        android:label="@string/app_name"
+39-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:25:9-41
+40        android:roundIcon="@mipmap/ic_launcher_round"
+40-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:26:9-54
+41        android:supportsRtl="true"
+41-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:27:9-35
+42        android:theme="@style/Theme.FakeRoot"
+42-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:29:9-46
+43        android:usesCleartextTraffic="true" >
+43-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:28:9-44
+44        <activity
+44-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:31:9-39:20
+45            android:name="com.fakeroot.manager.MainActivity"
+45-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:32:13-41
+46            android:exported="true"
+46-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:33:13-36
+47            android:windowSoftInputMode="adjustPan" >
+47-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:34:13-52
+48            <intent-filter>
+48-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:35:13-38:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:36:17-69
+49-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:36:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:37:17-77
+51-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:37:27-74
+52            </intent-filter>
+53        </activity>
+54        <activity
+54-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:41:9-44:55
+55            android:name="com.fakeroot.manager.SettingsActivity"
+55-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:42:13-45
+56            android:exported="false"
+56-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:43:13-37
+57            android:label="@string/action_settings" />
+57-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:44:13-52
+58        <activity
+58-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:46:9-54:20
+59            android:name="com.fakeroot.manager.authorization.RequestPermissionActivity"
+59-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:47:13-68
+60            android:exported="true"
+60-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:48:13-36
+61            android:theme="@style/Theme.FakeRoot.Dialog" >
+61-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:49:13-57
+62            <intent-filter>
+62-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:50:13-53:29
+63                <action android:name="com.fakeroot.action.REQUEST_PERMISSION" />
+63-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:51:17-81
+63-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:51:25-78
+64
+65                <category android:name="android.intent.category.DEFAULT" />
+65-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:52:17-76
+65-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:52:27-73
+66            </intent-filter>
+67        </activity>
+68
+69        <!-- Provider for receiving binder -->
+70        <provider
+70-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:57:9-60:39
+71            android:name="com.fakeroot.manager.FakeRootProvider"
+71-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:58:13-45
+72            android:authorities="com.fakeroot.manager.fakeroot"
+72-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:59:13-64
+73            android:exported="true" />
+73-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:60:13-36
+74
+75        <!-- Shizuku Provider -->
+76        <provider
+77            android:name="rikka.shizuku.ShizukuProvider"
+77-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:64:13-57
+78            android:authorities="com.fakeroot.manager.shizuku"
+78-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:65:13-59
+79            android:enabled="true"
+79-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:66:13-35
+80            android:exported="true"
+80-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:67:13-36
+81            android:multiprocess="false"
+81-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:68:13-41
+82            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+82-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:69:13-79
+83
+84        <!-- Boot receiver -->
+85        <receiver
+85-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:72:9-78:20
+86            android:name="com.fakeroot.manager.boot.BootReceiver"
+86-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:73:13-46
+87            android:exported="true" >
+87-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:74:13-36
+88            <intent-filter>
+88-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:75:13-77:29
+89                <action android:name="android.intent.action.BOOT_COMPLETED" />
+89-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:76:17-79
+89-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:76:25-76
+90            </intent-filter>
+91        </receiver>
+92
+93        <!-- Boot receiver -->
+94        <receiver
+94-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:9-22:20
+95            android:name="com.fakeroot.bootstarter.BootReceiver"
+95-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-65
+96            android:enabled="true"
+96-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-35
+97            android:exported="true" >
+97-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-36
+98            <intent-filter android:priority="1000" >
+98-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-21:29
+98-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:28-51
+99                <action android:name="android.intent.action.BOOT_COMPLETED" />
+99-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:76:17-79
+99-->C:\Users\wn732\Desktop\FakeRoot\manager\src\main\AndroidManifest.xml:76:25-76
+100                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+100-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:17-82
+100-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:25-79
+101                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+101-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:17-82
+101-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:25-79
+102                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+102-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:17-84
+102-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:25-81
+103            </intent-filter>
+104        </receiver> <!-- Auto-start service -->
+105        <service
+105-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:25:9-28:40
+106            android:name="com.fakeroot.bootstarter.AutoStartService"
+106-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:26:13-69
+107            android:enabled="true"
+107-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:27:13-35
+108            android:exported="false" />
+108-->[:bootstarter] C:\Users\wn732\Desktop\FakeRoot\bootstarter\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:13-37
+109
+110        <provider
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wn732\.gradle\caches\8.14\transforms\20dcdf11bf1fd853aa08a93df848590b\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+111            android:name="androidx.startup.InitializationProvider"
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wn732\.gradle\caches\8.14\transforms\20dcdf11bf1fd853aa08a93df848590b\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+112            android:authorities="com.fakeroot.manager.androidx-startup"
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wn732\.gradle\caches\8.14\transforms\20dcdf11bf1fd853aa08a93df848590b\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+113            android:exported="false" >
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wn732\.gradle\caches\8.14\transforms\20dcdf11bf1fd853aa08a93df848590b\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+114            <meta-data
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wn732\.gradle\caches\8.14\transforms\20dcdf11bf1fd853aa08a93df848590b\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+115                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wn732\.gradle\caches\8.14\transforms\20dcdf11bf1fd853aa08a93df848590b\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+116                android:value="androidx.startup" />
+116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\wn732\.gradle\caches\8.14\transforms\20dcdf11bf1fd853aa08a93df848590b\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+117            <meta-data
+117-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\wn732\.gradle\caches\8.14\transforms\bce0ad662985988996b8d4d0298c41ee\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+118                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+118-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\wn732\.gradle\caches\8.14\transforms\bce0ad662985988996b8d4d0298c41ee\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+119                android:value="androidx.startup" />
+119-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\wn732\.gradle\caches\8.14\transforms\bce0ad662985988996b8d4d0298c41ee\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+120            <meta-data
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+121                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+122                android:value="androidx.startup" />
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+123        </provider>
+124
+125        <uses-library
+125-->[androidx.window:window:1.0.0] C:\Users\wn732\.gradle\caches\8.14\transforms\5422025be77f9b6c773d38af11a40a06\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+126            android:name="androidx.window.extensions"
+126-->[androidx.window:window:1.0.0] C:\Users\wn732\.gradle\caches\8.14\transforms\5422025be77f9b6c773d38af11a40a06\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+127            android:required="false" />
+127-->[androidx.window:window:1.0.0] C:\Users\wn732\.gradle\caches\8.14\transforms\5422025be77f9b6c773d38af11a40a06\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+128        <uses-library
+128-->[androidx.window:window:1.0.0] C:\Users\wn732\.gradle\caches\8.14\transforms\5422025be77f9b6c773d38af11a40a06\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+129            android:name="androidx.window.sidecar"
+129-->[androidx.window:window:1.0.0] C:\Users\wn732\.gradle\caches\8.14\transforms\5422025be77f9b6c773d38af11a40a06\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+130            android:required="false" />
+130-->[androidx.window:window:1.0.0] C:\Users\wn732\.gradle\caches\8.14\transforms\5422025be77f9b6c773d38af11a40a06\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+131
+132        <meta-data
+132-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\wn732\.gradle\caches\8.14\transforms\3a09cb4b045cb02677ecb317c8579543\transformed\provider-13.1.5\AndroidManifest.xml:11:9-13:36
+133            android:name="moe.shizuku.client.V3_SUPPORT"
+133-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\wn732\.gradle\caches\8.14\transforms\3a09cb4b045cb02677ecb317c8579543\transformed\provider-13.1.5\AndroidManifest.xml:12:13-57
+134            android:value="true" />
+134-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\wn732\.gradle\caches\8.14\transforms\3a09cb4b045cb02677ecb317c8579543\transformed\provider-13.1.5\AndroidManifest.xml:13:13-33
+135
+136        <receiver
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+137            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+138            android:directBootAware="false"
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+139            android:enabled="true"
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+140            android:exported="true"
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+141            android:permission="android.permission.DUMP" >
+141-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+142            <intent-filter>
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+143                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+144            </intent-filter>
+145            <intent-filter>
+145-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+146                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+147            </intent-filter>
+148            <intent-filter>
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+149                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+150            </intent-filter>
+151            <intent-filter>
+151-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+152                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\wn732\.gradle\caches\8.14\transforms\6c2863536b490a5ad10778aadd74540e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+153            </intent-filter>
+154        </receiver>
+155    </application>
+156
+157</manifest>

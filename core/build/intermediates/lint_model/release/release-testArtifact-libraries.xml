@@ -1,0 +1,15 @@
+<libraries>
+  <library
+      name=":@@:core::release"
+      jars="C:\Users\wn732\.gradle\caches\8.14\transforms\f49f670915cca2f0d26eff8a116981b5\transformed\out\jars\classes.jar;C:\Users\wn732\.gradle\caches\8.14\transforms\f49f670915cca2f0d26eff8a116981b5\transformed\out\jars\libs\R.jar"
+      resolved="FakeRoot:core:unspecified"
+      folder="C:\Users\wn732\.gradle\caches\8.14\transforms\f49f670915cca2f0d26eff8a116981b5\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+</libraries>
