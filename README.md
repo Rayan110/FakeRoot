@@ -122,11 +122,11 @@ service call miui.mqsas.IMQSNative 21 i32 1 s16 "sh" i32 1 s16 "脚本路径" s1
 ## 🙏 致谢
 
 - [Shizuku](https://github.com/RikkaApps/Shizuku) - 提供了 ADB 权限提升方案
-- MIUI 系统 - 提供了 IMQSNative 服务
+- 酷安的各位大佬
 
 ## 📄 许可证
 
-本项目基于 Shizuku 项目开发，遵循类似的许可条款。
+本项目遵循MIT开源协议
 
 ## 👤 作者
 
