@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "WebSearch",
+      "Bash(./gradlew assembleDebug:*)",
+      "Bash(adb install:*)",
+      "Bash(./gradlew :manager:assembleDebug:*)",
+      "Bash(./gradlew clean:*)",
+      "Bash(./gradlew :manager:compileDebugKotlin:*)",
+      "Bash(adb shell:*)"
+    ]
+  }
+}

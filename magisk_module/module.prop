@@ -1,6 +1,0 @@
-id=fakeroot
-name=FakeRoot - IMQSNative Root
-version=1.0.0
-versionCode=100
-author=FakeRoot
-description=Root access via MIUI's IMQSNative service without unlocking bootloader. Provides 'su' command that executes commands with root privileges through the hidden IMQSNative system service.
